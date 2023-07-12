@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+麻雀のアプリを作っていこうと思います。構想としては以下の通り<br>
+1.役判定アプリ<br>
+選択された14枚の牌の組み合わせに対して、聴牌かどうかを判定します。<br>
+さらに、聴牌だった場合は完成している役を表示し、合計の翻数を集計します<br>
+<br>
+2.1人回し用麻雀ゲーム<br>
+1人回しで遊ぶための麻雀のゲームです。ランダムに配られる13枚の牌に加えて1枚の牌を引き、その後1枚の牌を捨てるのを繰り返して上がりを目指すというゲーム性は通常の麻雀と同様ですが、特徴は自分の他に対戦相手は存在せず、自分1人だけが上がりを目指していくというものです。<br>
+見事上がった際は上がった時の巡目と役の高さに応じて得点が得られます。<br>
+上がることなく流局、または8連荘するまでゲームを繰り返し、高得点を目指していきます。<br>
+<br>
+3.2人用麻雀対戦ゲーム<br>
+2人用の麻雀ゲーム、逆境無頼カイジに出てきた17歩というゲームがモデルです。<br>
+最初にお互い34枚の牌が配られ、そこから13枚の牌を選び、時間内に聴牌形を作ります。<br>
+その後、お互いに1枚ずつ牌を切っていき、上がり牌が切られた場合はそこでゲーム中断。<br>
+上がったプレイヤーが役の高さに応じて得点します。<br>
+お互いの上がり牌が切られることなく17枚の牌を切り終わったら、流局です。<br>
