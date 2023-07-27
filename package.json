@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir src",
-    "fix": "eslint --cache --fix src/ && prettier --write src/"
+    "fix": "eslint --cache --fix src/ && eslint --cache --fix public/ts && prettier --write src/ && prettier --write public/ts"
   },
   "dependencies": {
     "@types/node": "20.4.1",
